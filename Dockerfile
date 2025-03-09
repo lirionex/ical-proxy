@@ -5,7 +5,7 @@ COPY . .
 
 RUN go build -o ical-proxy
 
-FROM debian:bookwork-slim
+FROM alpine:latest
 
 WORKDIR /app
 COPY --from=builder /app/ical-proxy /app/ical-proxy
