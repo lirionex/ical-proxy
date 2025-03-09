@@ -5,7 +5,7 @@ COPY . .
 
 RUN go build -o ical-proxy
 
-FROM gcr.io/distroless/base-debian11
+FROM debian:bookwork-slim
 
 WORKDIR /app
 COPY --from=builder /app/ical-proxy /app/ical-proxy
