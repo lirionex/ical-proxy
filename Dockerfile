@@ -3,7 +3,7 @@ FROM golang:1.24 AS builder
 WORKDIR /app
 COPY . .
 
-RUN go build -o ical-proxy
+RUN CGO_ENABLED=0 go build -o ./ical-proxy
 
 FROM alpine:latest
 
