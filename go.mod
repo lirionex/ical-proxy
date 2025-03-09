@@ -1,4 +1,4 @@
-module calendarr
+module ical-proxy
 
 go 1.24
 
